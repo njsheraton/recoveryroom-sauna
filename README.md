@@ -21,7 +21,13 @@ python3 -m recoveryroom_sauna pair --config config/simulated.config.json
 
 ## Read-only field test on the shop Mac (gate A)
 
-Run this on the Mac, on the shop LAN, while watching the physical panel. It never sends a control frame.
+First find the sauna's address. This only attempts TCP connections on the sauna port across the Mac's own subnet:
+
+```bash
+python3 tools/find_sauna.py
+```
+
+Then run the diagnostic with the address it reports, while watching the physical panel. It never sends a control frame.
 
 ```bash
 python3 tools/lan_diagnose.py --host <SAUNA_PRIVATE_IP> --seconds 120 --out lan_diagnose_report.json
@@ -55,7 +61,7 @@ Unit and HTTP tests never connect to a real appliance.
 ```
 recoveryroom_sauna/   protocol, simulator, device (LAN worker), business_hours, config, security, server, static UI
 tests/                simulated tests only
-tools/                lan_diagnose.py (read-only field diagnostic)
+tools/                find_sauna.py (LAN port scan), lan_diagnose.py (read-only field diagnostic)
 config/               non-secret example configs
 docs/                 plan-and-inputs.md, unverified.md
 private/              (never created in Git) sessions, pairing, future state and credentials
