@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "installationName": "Recovery Room",
+  "saunaHost": null,
+  "saunaPort": 12416,
+  "webBind": "127.0.0.1",
+  "webPort": 8787,
+  "timezone": "Australia/Brisbane",
+  "targetTempC": 80,
+  "readyTempC": 55,
+  "hardwareTimerMaxMinutes": 60,
+  "renewEveryMinutes": 30,
+  "deliveryReserveSeconds": 120,
+  "businessHours": {
+    "revision": "unset",
+    "weekly": null,
+    "dateOverrides": {},
+    "preheatLeadMinutes": 30,
+    "shutdownAfterCloseMinutes": 30,
+    "autoStartEnabled": false,
+    "requireDailyArming": true
+  },
+  "continuousOperationLimitMinutes": null,
+  "cloudFallback": { "enabled": false },
+  "remoteAccess": { "enabled": false, "publicHostname": null },
+  "commissioning": {
+    "writesEnabled": false,
+    "inspectionProcedureApproved": false,
+    "manufacturerRemoteStartApproved": false,
+    "approvedBy": null,
+    "approvedOn": null
+  },
+  "security": {
+    "allowedHosts": ["127.0.0.1:8787", "localhost:8787"],
+    "sessionLifetimeDays": 30,
+    "pairingPinLifetimeMinutes": 10,
+    "pairingMaxAttempts": 5
+  },
+  "simulate": false,
+  "privateDir": "../private"
+}

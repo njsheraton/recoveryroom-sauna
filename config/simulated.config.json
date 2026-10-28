@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "installationName": "Recovery Room (SIMULATED)",
+  "saunaHost": null,
+  "saunaPort": 12416,
+  "webBind": "127.0.0.1",
+  "webPort": 8787,
+  "timezone": "Australia/Brisbane",
+  "businessHours": {
+    "revision": "example-only-not-real-hours",
+    "weekly": {
+      "monday":    { "open": "09:00", "close": "17:00" },
+      "tuesday":   { "open": "09:00", "close": "17:00" },
+      "wednesday": { "open": "09:00", "close": "17:00" },
+      "thursday":  { "open": "09:00", "close": "19:00" },
+      "friday":    { "open": "09:00", "close": "17:00" },
+      "saturday":  { "open": "08:00", "close": "13:00" },
+      "sunday":    null
+    },
+    "dateOverrides": { "2026-12-25": null, "2026-12-26": null, "2027-01-01": null },
+    "preheatLeadMinutes": 30,
+    "shutdownAfterCloseMinutes": 30,
+    "autoStartEnabled": false,
+    "requireDailyArming": true
+  },
+  "continuousOperationLimitMinutes": null,
+  "cloudFallback": { "enabled": false },
+  "remoteAccess": { "enabled": false },
+  "commissioning": { "writesEnabled": false },
+  "simulate": true,
+  "privateDir": "../private-simulated"
+}

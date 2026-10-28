@@ -1,0 +1,16 @@
+# Private runtime data, credentials, state, logs and backups never go in Git.
+private/
+*.private.json
+*.log
+state/
+backups/
+.env
+BUILD_ID
+
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.DS_Store

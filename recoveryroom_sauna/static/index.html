@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recovery Room Sauna</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header>
+  <h1 id="title">Recovery Room Sauna</h1>
+  <div class="banner" id="mode-banner">READ-ONLY BUILD. Controls are disabled. Use the sauna's physical panel.</div>
+</header>
+
+<main id="app" hidden>
+  <section class="grid">
+    <div class="card">
+      <h2>Heating</h2>
+      <div class="big" id="power">unknown</div>
+      <div class="sub">Appliance power, from fresh telemetry only. Not the automation mode.</div>
+      <div class="row"><span>Current</span><strong id="current">—</strong></div>
+      <div class="row"><span>Target</span><strong id="target">—</strong></div>
+      <div class="row"><span>Hardware timer</span><strong id="timer">—</strong></div>
+      <div class="row"><span>Ready (≥ <span id="ready-threshold">55</span>°C)</span><strong id="ready">—</strong></div>
+    </div>
+
+    <div class="card">
+      <h2>Connection</h2>
+      <div class="row"><span>Route</span><strong id="route">—</strong></div>
+      <div class="row"><span>State</span><strong id="conn">—</strong></div>
+      <div class="row"><span>Sample age</span><strong id="age">—</strong></div>
+      <div class="row"><span>Fresh</span><strong id="fresh">—</strong></div>
+      <div class="row"><span>Observation #</span><strong id="obsid">—</strong></div>
+      <div class="row"><span>Last error</span><strong id="lasterr" class="wrap">—</strong></div>
+      <div class="sub">Website health is not appliance health. "Unknown" stays unknown.</div>
+    </div>
+
+    <div class="card">
+      <h2>Lights</h2>
+      <div class="row"><span>Inside</span><strong id="light-in">—</strong></div>
+      <div class="row"><span>Outside</span><strong id="light-out">—</strong></div>
+    </div>
+
+    <div class="card">
+      <h2>Automation</h2>
+      <div class="row"><span>Mode</span><strong id="auto-mode">—</strong></div>
+      <div class="row"><span>Armed today</span><strong id="armed">—</strong></div>
+      <div class="row"><span>Pending Stop</span><strong id="pending-stop">—</strong></div>
+      <div class="row"><span>Writes enabled</span><strong id="writes">—</strong></div>
+      <details><summary>Why scheduled heating is blocked</summary><ul id="blockers"></ul></details>
+    </div>
+
+    <div class="card">
+      <h2>Operating hours</h2>
+      <div class="row"><span>Policy</span><strong id="hours-rev">—</strong></div>
+      <div class="row"><span>Next preheat eligible</span><strong id="next-preheat">—</strong></div>
+      <div class="row"><span>Today's opening</span><strong id="opens">—</strong></div>
+      <div class="row"><span>Today's closing</span><strong id="closes">—</strong></div>
+      <div class="row"><span>Latest shutdown</span><strong id="cutoff">—</strong></div>
+      <div class="row"><span>Countdown to cutoff</span><strong id="countdown">—</strong></div>
+      <div class="sub">Countdowns are descriptive. The Mac makes the safety decision; the physical timer and staff checks remain the backstop.</div>
+    </div>
+  </section>
+
+  <section class="controls">
+    <button id="refresh" type="button">Refresh (read only)</button>
+    <button type="button" disabled title="Not available in the read-only build">Warm up now</button>
+    <button type="button" disabled title="Not available in the read-only build">Take manual control</button>
+    <button type="button" class="stop" disabled title="Not available in the read-only build. Use the physical panel.">Finish and turn off</button>
+    <button id="logout" type="button" class="quiet">Sign out this browser</button>
+  </section>
+</main>
+
+<main id="pair" hidden>
+  <div class="card narrow">
+    <h2>Pair this browser</h2>
+    <p>Ask the owner to run <code>pair</code> on this Mac and enter the six-digit PIN shown there. The PIN expires in a few minutes.</p>
+    <p id="pair-closed" hidden class="warn">Pairing is not open. Run the pair command on the shop Mac first.</p>
+    <label>PIN <input id="pin" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code"></label>
+    <label>Label <input id="label" value="Shop Mac browser" maxlength="64"></label>
+    <button id="pair-btn" type="button">Pair</button>
+    <p id="pair-msg" class="warn"></p>
+  </div>
+</main>
+
+<footer>
+  <span id="footer-version">—</span> · <span id="footer-time">—</span>
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
