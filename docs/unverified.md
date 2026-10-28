@@ -4,6 +4,8 @@ Living register. Nothing is removed from here without recorded evidence (what wa
 by whom, on which firmware). Simulated test passes never count as verification of the appliance.
 
 ## Protocol (provisional until gate A)
+- **Which Clearlight control system the shop Sanctuary 3 uses** (legacy 2.4 GHz app vs the 5GHz app
+  generation). The two may not share a LAN protocol at all. Unknown as of 29 Oct 2026.
 - Frame prefix, varint length, reserved byte and command numbers are transcribed from the handoff,
   not from a manufacturer document.
 - Whether 0x0090 (state request) carries a sequence number. This build assumes only 0x0093/0x0094 do.

@@ -77,9 +77,13 @@ Items marked **blocks A** are needed before the read-only field test; **blocks B
 **blocks C** before scheduled preheat. Everything else can wait.
 
 ### Equipment and manufacturer (safety)
-1. **Exact sauna model and controller** (Sanctuary / Premier / other, cabin size), the Wi-Fi module
-   type and whichever phone app currently controls it. A photo of the controller label and the
-   app's device-info screen is ideal. *(blocks A)*
+1. **Exact sauna model and controller.** Model confirmed by John on 29 Oct 2026: **Clearlight
+   Sanctuary 3**. Still needed: which phone app controls it. Clearlight ships two incompatible
+   systems: the older *Clearlight Sauna Connect* (2.4 GHz only) and the newer *Clearlight Sauna
+   Connect 5GHz* (Bluetooth-assisted setup, needs a 5 GHz-compatible power supply). The handoff's
+   reference protocol was observed on one of these; if the shop unit runs the other, the LAN
+   protocol may be entirely different. A photo of the controller label and the app's device-info
+   screen settles it. *(blocks A)*
 2. **Current manual** for that model, and the printed page that covers remote operation.
    The ANZ 2022 Sanctuary manual (p.96 item 19) requires cabin inspection before a remote start or
    timer restart. *(blocks B)*
