@@ -78,7 +78,10 @@ Items marked **blocks A** are needed before the read-only field test; **blocks B
 
 ### Equipment and manufacturer (safety)
 1. **Exact sauna model and controller.** Model confirmed by John on 29 Oct 2026: **Clearlight
-   Sanctuary 3**. Still needed: which phone app controls it. Clearlight ships two incompatible
+   Sanctuary 3**, controlled by the older *Clearlight Sauna Connect* app (confirmed 29 Oct 2026),
+   which currently does not connect to the sauna. That app is the 2.4 GHz generation the reference
+   protocol was observed on, so the LAN protocol is plausibly compatible. Whether the sauna is
+   actually joined to the shop Wi-Fi is unknown; the app failure may be cloud-side or Wi-Fi-side. Clearlight ships two incompatible
    systems: the older *Clearlight Sauna Connect* (2.4 GHz only) and the newer *Clearlight Sauna
    Connect 5GHz* (Bluetooth-assisted setup, needs a 5 GHz-compatible power supply). The handoff's
    reference protocol was observed on one of these; if the shop unit runs the other, the LAN

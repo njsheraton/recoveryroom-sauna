@@ -5,7 +5,8 @@ by whom, on which firmware). Simulated test passes never count as verification o
 
 ## Protocol (provisional until gate A)
 - **Which Clearlight control system the shop Sanctuary 3 uses** (legacy 2.4 GHz app vs the 5GHz app
-  generation). The two may not share a LAN protocol at all. Unknown as of 29 Oct 2026.
+  generation). Confirmed 29 Oct 2026: legacy *Clearlight Sauna Connect* app, which is the
+  generation the reference protocol came from. Still unverified on this unit.
 - Frame prefix, varint length, reserved byte and command numbers are transcribed from the handoff,
   not from a manufacturer document.
 - Whether 0x0090 (state request) carries a sequence number. This build assumes only 0x0093/0x0094 do.
